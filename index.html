@@ -39,6 +39,38 @@
             font-size: 1.1rem;
         }
 
+        .context-box {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .context-box h3 {
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+
+        .context-box ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .context-box li {
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .context-box li::before {
+            content: "▸";
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
         .score-section {
             background: white;
             border-radius: 1.5rem;
@@ -55,7 +87,7 @@
 
         .scores-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
@@ -93,8 +125,7 @@
 
         .wix { background: #3b82f6; }
         .sharepoint { background: #9333ea; }
-        .manus { background: #22c55e; }
-        .react { background: #f97316; }
+        .manus { background: #ef4444; }
 
         .progress-bar-container {
             background: #e2e8f0;
@@ -168,12 +199,12 @@
         }
 
         .criteria-content.expanded {
-            max-height: 3000px;
+            max-height: 5000px;
         }
 
         .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 1.5rem;
             padding: 1.5rem;
         }
@@ -274,7 +305,7 @@
 
         .recommendations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
 
@@ -302,8 +333,7 @@
 
         .recommendation-card:nth-child(1) h3::before { background: #3b82f6; }
         .recommendation-card:nth-child(2) h3::before { background: #9333ea; }
-        .recommendation-card:nth-child(3) h3::before { background: #22c55e; }
-        .recommendation-card:nth-child(4) h3::before { background: #f97316; }
+        .recommendation-card:nth-child(3) h3::before { background: #ef4444; }
 
         .info-item {
             font-size: 0.9rem;
@@ -330,10 +360,32 @@
             color: #78350f;
         }
 
+        .danger-box {
+            background: #fee2e2;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin: 0.75rem 0;
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #991b1b;
+        }
+
+        .success-box {
+            background: #d1fae5;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin: 0.75rem 0;
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #065f46;
+        }
+
         .final-verdict {
-            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+            background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
             border-radius: 1.5rem;
-            box-shadow: 0 8px 16px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 8px 16px rgba(147, 51, 234, 0.3);
             padding: 2.5rem;
             margin-top: 2rem;
             color: white;
@@ -376,41 +428,58 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Comparativo: Plataformas para Intranet</h1>
-            <p>Análise completa de segurança, custos, design, customização, usabilidade e integrações</p>
+            <h1>Comparativo: Plataformas para Intranet Corporativa</h1>
+            <p>Análise detalhada para ~50 usuários (Brasil + EUA) com integração Microsoft</p>
+        </div>
+
+        <!-- Contexto -->
+        <div class="context-box">
+            <h3>📋 Cenário Analisado</h3>
+            <ul>
+                <li>~50 usuários distribuídos entre Brasil e Estados Unidos</li>
+                <li>Integração necessária com ecossistema Microsoft (Teams/Azure AD)</li>
+                <li>Requisitos: colaboração, gestão documental e comunicação interna</li>
+                <li>Análise baseada em: segurança, custos, integração, escalabilidade e maturidade</li>
+            </ul>
         </div>
 
         <!-- Pontuação Total -->
         <div class="score-section">
-            <h2>Pontuação Total (máx: 60 pontos)</h2>
+            <h2>📊 Pontuação Global</h2>
             <div class="scores-grid">
                 <div class="score-card">
                     <div class="score-card-header">
-                        <h3>Wix</h3>
-                        <div class="platform-indicator wix"></div>
+                        <h3>Microsoft SharePoint</h3>
+                        <div class="platform-indicator sharepoint"></div>
                     </div>
-                    <div class="score-label">Pontuação</div>
+                    <div class="score-label">Pontuação Total</div>
                     <div class="progress-bar-container">
-                        <div class="progress-bar wix" style="width: 52%"></div>
+                        <div class="progress-bar sharepoint" style="width: 92%"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <span style="font-weight: 600; color: #64748b;">31/60</span>
-                        <span class="score-value">52%</span>
+                        <span style="font-weight: 600; color: #64748b;">9.2/10</span>
+                        <span class="score-value">92%</span>
+                    </div>
+                    <div class="success-box" style="margin-top: 1rem;">
+                        ✓ Recomendado para o cenário
                     </div>
                 </div>
 
                 <div class="score-card">
                     <div class="score-card-header">
-                        <h3>SharePoint/Teams</h3>
-                        <div class="platform-indicator sharepoint"></div>
+                        <h3>Wix Enterprise</h3>
+                        <div class="platform-indicator wix"></div>
                     </div>
-                    <div class="score-label">Pontuação</div>
+                    <div class="score-label">Pontuação Total</div>
                     <div class="progress-bar-container">
-                        <div class="progress-bar sharepoint" style="width: 78%"></div>
+                        <div class="progress-bar wix" style="width: 48%"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <span style="font-weight: 600; color: #64748b;">47/60</span>
-                        <span class="score-value">78%</span>
+                        <span style="font-weight: 600; color: #64748b;">4.8/10</span>
+                        <span class="score-value">48%</span>
+                    </div>
+                    <div class="warning-box" style="margin-top: 1rem;">
+                        ⚠️ Não recomendado
                     </div>
                 </div>
 
@@ -419,28 +488,16 @@
                         <h3>Manus IA</h3>
                         <div class="platform-indicator manus"></div>
                     </div>
-                    <div class="score-label">Pontuação</div>
+                    <div class="score-label">Pontuação Total</div>
                     <div class="progress-bar-container">
-                        <div class="progress-bar manus" style="width: 73%"></div>
+                        <div class="progress-bar manus" style="width: 40%"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <span style="font-weight: 600; color: #64748b;">44/60</span>
-                        <span class="score-value">73%</span>
+                        <span style="font-weight: 600; color: #64748b;">4.0/10</span>
+                        <span class="score-value">40%</span>
                     </div>
-                </div>
-
-                <div class="score-card">
-                    <div class="score-card-header">
-                        <h3>React + Vite + Supabase</h3>
-                        <div class="platform-indicator react"></div>
-                    </div>
-                    <div class="score-label">Pontuação</div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar react" style="width: 88%"></div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <span style="font-weight: 600; color: #64748b;">53/60</span>
-                        <span class="score-value">88%</span>
+                    <div class="danger-box" style="margin-top: 1rem;">
+                        ✗ Não adequado para intranet
                     </div>
                 </div>
             </div>
@@ -449,51 +506,18 @@
         <!-- Critérios Detalhados -->
         <div class="criteria-section">
             <div class="criteria-card">
-                <div class="criteria-header" onclick="toggleCriteria('security')">
+                <div class="criteria-header" onclick="toggleCriteria('integration')">
                     <div class="criteria-title">
-                        <span class="criteria-icon">🔒</span>
-                        <h3>Segurança</h3>
+                        <span class="criteria-icon">🔗</span>
+                        <h3>Integração com Microsoft</h3>
                     </div>
-                    <span class="chevron" id="chevron-security">▼</span>
+                    <span class="chevron" id="chevron-integration">▼</span>
                 </div>
-                <div class="criteria-content" id="content-security">
+                <div class="criteria-content" id="content-integration">
                     <div class="platforms-grid">
                         <div class="platform-detail">
                             <div class="platform-detail-header">
-                                <h4>Wix</h4>
-                                <div class="score-display">
-                                    <span class="score-number">3</span>
-                                    <span class="score-max">/10</span>
-                                </div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar wix" style="width: 30%"></div>
-                            </div>
-                            <div class="pros-cons">
-                                <div class="pros-section">
-                                    <div class="section-label">Pontos Positivos</div>
-                                    <ul>
-                                        <li>SSL incluso</li>
-                                        <li>Backups automáticos</li>
-                                        <li>Proteção DDoS básica</li>
-                                    </ul>
-                                </div>
-                                <div class="cons-section">
-                                    <div class="section-label">Pontos Negativos</div>
-                                    <ul>
-                                        <li>Sem SSO empresarial</li>
-                                        <li>Sem controle de IP</li>
-                                        <li>Sem Active Directory</li>
-                                        <li>Dados em servidor compartilhado</li>
-                                        <li>Auditoria limitada</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="platform-detail">
-                            <div class="platform-detail-header">
-                                <h4>SharePoint/Teams</h4>
+                                <h4>SharePoint</h4>
                                 <div class="score-display">
                                     <span class="score-number">10</span>
                                     <span class="score-max">/10</span>
@@ -506,17 +530,47 @@
                                 <div class="pros-section">
                                     <div class="section-label">Pontos Positivos</div>
                                     <ul>
-                                        <li>SSO e Azure AD</li>
-                                        <li>Compliance (ISO 27001, GDPR)</li>
-                                        <li>DLP e criptografia</li>
-                                        <li>Auditoria completa</li>
-                                        <li>Controle granular</li>
+                                        <li>Integração nativa com Teams</li>
+                                        <li>Azure AD/Entra ID completo</li>
+                                        <li>OneDrive integrado</li>
+                                        <li>Grupos de segurança Microsoft 365</li>
+                                        <li>Power Automate e Power Apps</li>
                                     </ul>
                                 </div>
                                 <div class="cons-section">
                                     <div class="section-label">Pontos Negativos</div>
                                     <ul>
-                                        <li>Configuração complexa inicial</li>
+                                        <li>Nenhum identificado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">3</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 30%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>SSO genérico disponível</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Sem integração nativa com Teams</li>
+                                        <li>Azure AD requer customização</li>
+                                        <li>Sem sincronização automática de grupos</li>
+                                        <li>Trabalho adicional de manutenção</li>
                                     </ul>
                                 </div>
                             </div>
@@ -526,29 +580,68 @@
                             <div class="platform-detail-header">
                                 <h4>Manus IA</h4>
                                 <div class="score-display">
-                                    <span class="score-number">7</span>
+                                    <span class="score-number">1</span>
                                     <span class="score-max">/10</span>
                                 </div>
                             </div>
                             <div class="progress-bar-container">
-                                <div class="progress-bar manus" style="width: 70%"></div>
+                                <div class="progress-bar manus" style="width: 10%"></div>
                             </div>
                             <div class="pros-cons">
                                 <div class="pros-section">
                                     <div class="section-label">Pontos Positivos</div>
                                     <ul>
-                                        <li>Autenticação básica</li>
-                                        <li>SSL/HTTPS</li>
-                                        <li>Backups</li>
-                                        <li>Permissões por usuário</li>
+                                        <li>OAuth genérico (Google, GitHub)</li>
                                     </ul>
                                 </div>
                                 <div class="cons-section">
                                     <div class="section-label">Pontos Negativos</div>
                                     <ul>
-                                        <li>SSO limitado</li>
-                                        <li>Compliance não certificado</li>
-                                        <li>Auditoria básica</li>
+                                        <li>Sem integração com Teams</li>
+                                        <li>Sem integração com SharePoint</li>
+                                        <li>Sem conector Microsoft 365</li>
+                                        <li>Azure AD não suportado nativamente</li>
+                                        <li>Requer desenvolvimento custom extensivo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="criteria-section">
+            <div class="criteria-card">
+                <div class="criteria-header" onclick="toggleCriteria('security')">
+                    <div class="criteria-title">
+                        <span class="criteria-icon">🔒</span>
+                        <h3>Segurança e Governança</h3>
+                    </div>
+                    <span class="chevron" id="chevron-security">▼</span>
+                </div>
+                <div class="criteria-content" id="content-security">
+                    <div class="platforms-grid">
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>SharePoint</h4>
+                                <div class="score-display">
+                                    <span class="score-number">10</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar sharepoint" style="width: 100%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>ISO 27001, SOC 2, GDPR</li>
+                                        <li>DLP nativo</li>
+                                        <li>Versionamento documental robusto</li>
+                                        <li>Auditoria completa</li>
+                                        <li>Metadados e pesquisa avançada</li>
                                     </ul>
                                 </div>
                             </div>
@@ -556,30 +649,481 @@
 
                         <div class="platform-detail">
                             <div class="platform-detail-header">
-                                <h4>React + Vite + Supabase</h4>
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">5</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 50%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>SOC 2 Type 2</li>
+                                        <li>HTTPS/TLS v1.3</li>
+                                        <li>Proteção anti-DDoS</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Controle de versão limitado</li>
+                                        <li>Sem DLP nativo</li>
+                                        <li>Metadados menos robustos</li>
+                                        <li>Pesquisa não otimizada</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Manus IA</h4>
+                                <div class="score-display">
+                                    <span class="score-number">4</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar manus" style="width: 40%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Criptografia end-to-end</li>
+                                        <li>GDPR mencionado</li>
+                                        <li>Controle de acesso por roles</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Sem certificações enterprise documentadas</li>
+                                        <li>Sem DLP nativo</li>
+                                        <li>Auditoria básica</li>
+                                        <li>Processamento em servidores cloud externos</li>
+                                        <li>Vulnerabilidade reportada (código fonte)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="criteria-section">
+            <div class="criteria-card">
+                <div class="criteria-header" onclick="toggleCriteria('cost')">
+                    <div class="criteria-title">
+                        <span class="criteria-icon">💰</span>
+                        <h3>Custo e Modelo de Pricing</h3>
+                    </div>
+                    <span class="chevron" id="chevron-cost">▼</span>
+                </div>
+                <div class="criteria-content" id="content-cost">
+                    <div class="platforms-grid">
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>SharePoint</h4>
                                 <div class="score-display">
                                     <span class="score-number">9</span>
                                     <span class="score-max">/10</span>
                                 </div>
                             </div>
                             <div class="progress-bar-container">
-                                <div class="progress-bar react" style="width: 90%"></div>
+                                <div class="progress-bar sharepoint" style="width: 90%"></div>
                             </div>
                             <div class="pros-cons">
                                 <div class="pros-section">
                                     <div class="section-label">Pontos Positivos</div>
                                     <ul>
-                                        <li>RLS do Supabase</li>
-                                        <li>Auth flexível (SSO possível)</li>
-                                        <li>Controle total</li>
-                                        <li>Criptografia configurável</li>
+                                        <li>Incluído em licenças M365 existentes</li>
+                                        <li>Custo incremental mínimo</li>
+                                        <li>Previsibilidade total</li>
+                                        <li>Sem surpresas orçamentárias</li>
                                     </ul>
                                 </div>
                                 <div class="cons-section">
                                     <div class="section-label">Pontos Negativos</div>
                                     <ul>
-                                        <li>Você é responsável pela implementação</li>
-                                        <li>Requer expertise em segurança</li>
+                                        <li>Requer licenças Microsoft 365</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">5</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 50%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Preço único por organização</li>
+                                        <li>Colaboradores ilimitados</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Preço customizado não publicado</li>
+                                        <li>Custos extras: integrações, storage</li>
+                                        <li>Alto overhead de customização</li>
+                                        <li>Pagamento por funcionalidades não usadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Manus IA</h4>
+                                <div class="score-display">
+                                    <span class="score-number">3</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar manus" style="width: 30%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Plano Team disponível</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>$1.950/mês para 50 usuários ($23.400/ano)</li>
+                                        <li>Modelo de créditos imprevisível</li>
+                                        <li>Créditos expiram mensalmente (sem rollover)</li>
+                                        <li>Planos esgotam em 4-5 tarefas complexas</li>
+                                        <li>Sem estimativa de consumo antes da execução</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="criteria-section">
+            <div class="criteria-card">
+                <div class="criteria-header" onclick="toggleCriteria('usability')">
+                    <div class="criteria-title">
+                        <span class="criteria-icon">👥</span>
+                        <h3>Usabilidade e Layout</h3>
+                    </div>
+                    <span class="chevron" id="chevron-usability">▼</span>
+                </div>
+                <div class="criteria-content" id="content-usability">
+                    <div class="platforms-grid">
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>SharePoint</h4>
+                                <div class="score-display">
+                                    <span class="score-number">7</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar sharepoint" style="width: 70%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Interface familiar para usuários Windows</li>
+                                        <li>Recursos de intranet prontos</li>
+                                        <li>Navegação corporativa estruturada</li>
+                                        <li>Produtividade orientada</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Menos flexibilidade visual que Wix</li>
+                                        <li>Design mais funcional que criativo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">8</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 80%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Excelente flexibilidade de design</li>
+                                        <li>Templates personalizados</li>
+                                        <li>Interface visual intuitiva</li>
+                                        <li>Suporte multilíngue</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Foco em marketing, não produtividade</li>
+                                        <li>Não otimizado para workflows internos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Manus IA</h4>
+                                <div class="score-display">
+                                    <span class="score-number">2</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar manus" style="width: 20%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Interface limpa tipo ChatGPT</li>
+                                        <li>Visualização de processos</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>NÃO é plataforma de intranet</li>
+                                        <li>Sem templates de portal corporativo</li>
+                                        <li>Foco em automação, não comunicação</li>
+                                        <li>Não substitui portal de intranet</li>
+                                        <li>Curva de aprendizado para conceitos de IA</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="criteria-section">
+            <div class="criteria-card">
+                <div class="criteria-header" onclick="toggleCriteria('maturity')">
+                    <div class="criteria-title">
+                        <span class="criteria-icon">⏱️</span>
+                        <h3>Maturidade e Estabilidade</h3>
+                    </div>
+                    <span class="chevron" id="chevron-maturity">▼</span>
+                </div>
+                <div class="criteria-content" id="content-maturity">
+                    <div class="platforms-grid">
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>SharePoint</h4>
+                                <div class="score-display">
+                                    <span class="score-number">10</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar sharepoint" style="width: 100%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Plataforma enterprise consolidada</li>
+                                        <li>Histórico comprovado em corporações</li>
+                                        <li>Infraestrutura global robusta</li>
+                                        <li>SLA de 99,9% uptime</li>
+                                        <li>Suporte Microsoft 24/7</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">7</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 70%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Plataforma consolidada</li>
+                                        <li>99,99% uptime garantido</li>
+                                        <li>Customer Success dedicado</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Comunidade focada em sites públicos</li>
+                                        <li>Poucas práticas para uso interno</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Manus IA</h4>
+                                <div class="score-display">
+                                    <span class="score-number">4</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar manus" style="width: 40%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Financiamento de $75M (Benchmark)</li>
+                                        <li>2+ milhões na lista de espera</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Lançado em março/2025 (8 meses)</li>
+                                        <li>Ainda em fase beta</li>
+                                        <li>Problemas de sobrecarga de servidores</li>
+                                        <li>Comportamento inconsistente reportado</li>
+                                        <li>Sem histórico enterprise comprovado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="criteria-section">
+            <div class="criteria-card">
+                <div class="criteria-header" onclick="toggleCriteria('scalability')">
+                    <div class="criteria-title">
+                        <span class="criteria-icon">📈</span>
+                        <h3>Escalabilidade Geográfica</h3>
+                    </div>
+                    <span class="chevron" id="chevron-scalability">▼</span>
+                </div>
+                <div class="criteria-content" id="content-scalability">
+                    <div class="platforms-grid">
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>SharePoint</h4>
+                                <div class="score-display">
+                                    <span class="score-number">10</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar sharepoint" style="width: 100%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Datacenters globais (Brasil e EUA)</li>
+                                        <li>Performance comprovada internacionalmente</li>
+                                        <li>CDN otimizado para latência</li>
+                                        <li>Capacidade para milhares de usuários</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Wix Enterprise</h4>
+                                <div class="score-display">
+                                    <span class="score-number">6</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar wix" style="width: 60%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Suficiente para 50 usuários</li>
+                                        <li>CDN global disponível</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Necessário verificar latência Brasil-EUA</li>
+                                        <li>Performance pode degradar com alto volume</li>
+                                        <li>Limitações em navegação complexa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-detail">
+                            <div class="platform-detail-header">
+                                <h4>Manus IA</h4>
+                                <div class="score-display">
+                                    <span class="score-number">5</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar manus" style="width: 50%"></div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros-section">
+                                    <div class="section-label">Pontos Positivos</div>
+                                    <ul>
+                                        <li>Arquitetura containerizada</li>
+                                    </ul>
+                                </div>
+                                <div class="cons-section">
+                                    <div class="section-label">Pontos Negativos</div>
+                                    <ul>
+                                        <li>Problemas iniciais de sobrecarga</li>
+                                        <li>Servidores em Singapura/China</li>
+                                        <li>Latência potencial para Brasil/EUA</li>
+                                        <li>Modelo de créditos problemático</li>
                                     </ul>
                                 </div>
                             </div>
@@ -591,81 +1135,82 @@
 
         <!-- Recomendações -->
         <div class="recommendations">
-            <h2>📋 Resumo e Recomendações</h2>
+            <h2>📋 Resumo e Recomendações por Plataforma</h2>
             <div class="recommendations-grid">
                 <div class="recommendation-card">
-                    <h3>Wix</h3>
+                    <h3>Microsoft SharePoint</h3>
+                    <div class="success-box">
+                        ✓ ALTAMENTE RECOMENDADO para o cenário
+                    </div>
                     <div class="info-item">
                         <span class="info-label">Melhor para: </span>
-                        <span class="info-value">Pequenas empresas que precisam de site interno muito simples</span>
-                    </div>
-                    <div class="warning-box">
-                        ⚠️ NÃO recomendado para intranet profissional
+                        <span class="info-value">Empresas no ecossistema Microsoft com necessidade de intranet enterprise robusta</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Tempo de lançamento: </span>
-                        <span class="info-value">1-2 semanas</span>
+                        <span class="info-label">Custo: </span>
+                        <span class="info-value">Incluído em licenças M365 existentes (custo incremental mínimo)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Tempo de implementação: </span>
+                        <span class="info-value">2-8 semanas</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Conhecimento técnico: </span>
-                        <span class="info-value">Nenhum</span>
+                        <span class="info-value">Básico a intermediário</span>
+                    </div>
+                    <div class="info-item" style="margin-top: 1rem;">
+                        <span class="info-label">Vantagens decisivas: </span>
+                        <span class="info-value">Integração nativa total, menor risco técnico, plataforma madura, governança robusta, escalabilidade comprovada</span>
                     </div>
                 </div>
 
                 <div class="recommendation-card">
-                    <h3>SharePoint/Teams</h3>
-                    <div class="info-item">
-                        <span class="info-label">Melhor para: </span>
-                        <span class="info-value">Empresas já no ecossistema Microsoft ou que precisam de solução enterprise robusta</span>
-                    </div>
+                    <h3>Wix Enterprise</h3>
                     <div class="warning-box">
-                        ⚠️ Requer licenças Microsoft 365
+                        ⚠️ NÃO RECOMENDADO para intranet corporativa
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Tempo de lançamento: </span>
-                        <span class="info-value">2-8 semanas (depende da complexidade)</span>
+                        <span class="info-label">Apropriado para: </span>
+                        <span class="info-value">Sites internos visuais altamente customizados, organizações fora do ecossistema Microsoft</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Custo: </span>
+                        <span class="info-value">Customizado (não publicado) + custos de customização</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Tempo de implementação: </span>
+                        <span class="info-value">1-2 semanas (básico)</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Conhecimento técnico: </span>
-                        <span class="info-value">Básico a intermediário (administrador MS)</span>
+                        <span class="info-value">Nenhum (básico) + desenvolvimento para integrações</span>
+                    </div>
+                    <div class="info-item" style="margin-top: 1rem;">
+                        <span class="info-label">Principais limitações: </span>
+                        <span class="info-value">Sem integração Microsoft nativa, foco em sites públicos, governança limitada, alto overhead de customização</span>
                     </div>
                 </div>
 
                 <div class="recommendation-card">
                     <h3>Manus IA</h3>
-                    <div class="info-item">
-                        <span class="info-label">Melhor para: </span>
-                        <span class="info-value">Empresas que querem solução pronta com IA e não tem equipe técnica</span>
-                    </div>
-                    <div class="warning-box">
-                        ⚠️ Verifique integrações com sistemas atuais
+                    <div class="danger-box">
+                        ✗ NÃO ADEQUADO para intranet corporativa
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Tempo de lançamento: </span>
-                        <span class="info-value">2-4 semanas</span>
+                        <span class="info-label">Propósito real: </span>
+                        <span class="info-value">Agente de IA para automação de tarefas, NÃO é plataforma de intranet</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Conhecimento técnico: </span>
-                        <span class="info-value">Básico</span>
-                    </div>
-                </div>
-
-                <div class="recommendation-card">
-                    <h3>React + Vite + Supabase</h3>
-                    <div class="info-item">
-                        <span class="info-label">Melhor para: </span>
-                        <span class="info-value">Empresas com equipe dev ou budget para contratar, que precisam de solução única</span>
-                    </div>
-                    <div class="warning-box">
-                        ⚠️ Alto custo inicial e manutenção contínua
+                        <span class="info-label">Custo: </span>
+                        <span class="info-value">$1.950/mês para 50 usuários ($23.400/ano) com modelo de créditos imprevisível</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Tempo de lançamento: </span>
-                        <span class="info-value">2-6 meses</span>
+                        <span class="info-label">Maturidade: </span>
+                        <span class="info-value">Lançado em março/2025 (apenas 8 meses), ainda em beta</span>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">Conhecimento técnico: </span>
-                        <span class="info-value">Alto (desenvolvedores full-stack)</span>
+                    <div class="info-item" style="margin-top: 1rem;">
+                        <span class="info-label">Bloqueadores críticos: </span>
+                        <span class="info-value">Zero integração Microsoft, não é portal de intranet, custos imprevisíveis, plataforma imatura, lacunas de governança</span>
                     </div>
                 </div>
             </div>
@@ -674,10 +1219,14 @@
         <!-- Veredito Final -->
         <div class="final-verdict">
             <h2>🎯 Recomendação Final</h2>
-            <p><strong>1º lugar:</strong> SharePoint/Teams - Melhor solução enterprise completa</p>
-            <p><strong>2º lugar:</strong> React + Vite + Supabase - Máxima flexibilidade (se tiver equipe técnica)</p>
-            <p><strong>3º lugar:</strong> Manus IA - Boa opção intermediária com IA</p>
-            <p><strong>❌ Evitar:</strong> Wix - Não foi feito para intranets corporativas</p>
+            <p><strong>Solução Recomendada: Microsoft SharePoint</strong></p>
+            <p>Para o cenário apresentado (~50 usuários, Brasil + EUA, integração Microsoft), o SharePoint é significativamente superior pelas seguintes razões:</p>
+            <p>✓ Integração nativa com Teams e Azure AD já utilizados</p>
+            <p>✓ Menor esforço de implementação com recursos prontos</p>
+            <p>✓ Menor risco técnico com plataforma madura e comprovada</p>
+            <p>✓ Melhor custo-benefício aproveitando licenças M365 existentes</p>
+            <p>✓ Escalabilidade global consolidada com datacenters no Brasil e EUA</p>
+            <p style="margin-top: 1.5rem;"><strong>Próximos Passos:</strong> Validar licenciamento M365, avaliar recursos disponíveis, planejar estrutura de permissões e governança, estabelecer treinamento de usuários.</p>
         </div>
     </div>
 
